@@ -45,40 +45,28 @@
             <span class="icon-bar"></span>
           </a>
           <a class="brand" href="#">Numbers!</a>
-          <div class="nav-collapse">
+          <!--div class="nav-collapse">
             <ul class="nav">
               <li class="active"><a href="#">Home</a></li>
               <li><a href="#about">About</a></li>
               <li><a href="#contact">Contact</a></li>
             </ul>
-          </div><!--/.nav-collapse -->
+          </div--><!--/.nav-collapse -->
         </div>
       </div>
     </div>
 
     <div class="container">
 
-      <h1>Enter a number from 0 to 1000</h1>
-      <p>Use this document as a way to quick start any new project.<br> All you get is this message and a barebones HTML document.</p>
-
+      <h1>If all the numbers from 1 to 1000 (one thousand) inclusive were written out in words, how many letters would be used in total?</h1>
+      <p>Answer: <?php include 'numbers.php';?></p>
+      <p><a href="https://github.com/dotmatrix/numbers">Download from GitHub</a></p>
     </div> <!-- /container -->
 
     <!-- Le javascript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="/js/jquery.js"></script>
-    <script src="/js/bootstrap-transition.js"></script>
-    <script src="/js/bootstrap-alert.js"></script>
-    <script src="/js/bootstrap-modal.js"></script>
-    <script src="/js/bootstrap-dropdown.js"></script>
-    <script src="/js/bootstrap-scrollspy.js"></script>
-    <script src="/js/bootstrap-tab.js"></script>
-    <script src="/js/bootstrap-tooltip.js"></script>
-    <script src="/js/bootstrap-popover.js"></script>
-    <script src="/js/bootstrap-button.js"></script>
-    <script src="/js/bootstrap-collapse.js"></script>
-    <script src="/js/bootstrap-carousel.js"></script>
-    <script src="/js/bootstrap-typeahead.js"></script>
 
   </body>
 </html>
