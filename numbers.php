@@ -17,13 +17,20 @@
 include 'includes.php';
 require_once('Numbers/Words.php');
 
+
+// configuration settings - in actual use, these would probably be in a different file i.e. where the function is being called
+
 $and = 'and'; 		// separator word i.e. one hunderd "and" one
 $locale = 'en_US'; 	// see https://github.com/pear/Numbers_Words for valid locales
 
 $start = 1; 		// number from which to start counting
 $end = 1000; 		// last number in sequence
 
+// function call... woo!
+
 echo number_sequence_char_count($start, $end, $and, $locale);
+
+// the function itself
 
 function number_sequence_char_count($start, $end, $and, $locale) {
 	 if ($start > $end) return -1;						// error condition if starting value exceeds last number			
