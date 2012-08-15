@@ -1,42 +1,24 @@
 <?php
-include includes.php;
-include Numbers_Words;
+include 'includes.php';
+require_once('Numbers/Words.php');
 
-$number_lookup_table = array (
+$metric = false; // set as true to omit "and" from character count
 
-		     1 => 'one',
-		     2 => 'two',
-		     3 => 'three',
-		     4 => 'four',
-		     5 => 'five',
-		     6 => 'six',
-		     7 => 'seven',
-		     8 => 'eight',
-		     9 => 'nine',
-		     10 => 'ten',
-		     11 => 'eleven',
-		     12 => 'twelve',
-		     13 => 'thirteen',
-		     14 => 'fourteen',
-		     15 => 'fifteen',
-		     16 => 'sixteen',
-		     17 => 'seventeen',
-		     18 => 'eighteen',
-		     19 => 'nineteen',
-		     20 => 'twenty',
-		     30 => 'thirty',
-		     40 => 'forty',
-		     50 => 'fifty',
-		     60 => 'sixty',
-		     70 => 'seventy',
-		     80 => 'eighty',
-		     90 => 'ninety',
-		     100 => 'hundred',
+$start = 1;
+$end = 1000;
+echo number_sequence_char_count($start, $end);
 
-
-
-);
-
-echo Numbers_Words::toWords(678);
-
+function number_sequence_char_count($start, $end) {
+	 $string_length = 0;
+	 $current_number = new Numbers_Words;
+	 for ($i = $start; $i<=$end; $i++) {
+	     $words = $current_number->toWords($i);
+	     $words = str_replace(array(' ', '-'), '', $words);
+	     if (($i > 100) && (!$metric) && ($i % 100 != 0)) {
+ 	     	$words .= 'and';
+	     }
+    	     $string_length += strlen($words);
+	 }
+return $string_length;
+}
 ?>
